@@ -2,6 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 // Service
+import {HeroesService} from './services/heroes.service';
 
 // Routes
 import {APP_ROUTING} from './app.routes';
@@ -27,7 +28,9 @@ import {FooterComponent} from './components/shared/footer/footer.component';
     BrowserModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [
+    HeroesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
