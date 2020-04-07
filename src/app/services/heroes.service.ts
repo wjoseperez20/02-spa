@@ -70,11 +70,29 @@ export class HeroesService {
   ];
 
   constructor() {
-    console.log('Listo para usarse');
   }
 
   getHeroes(): Heroe[] {
     return this.heroes;
+  }
+
+  getHeroe(index: string): Heroe[] {
+    return this.heroes[index];
+  }
+
+  buscarHeroes(word: string): Heroe[] {
+    let heroesArr: Heroe[] = [];
+    word = word.toLowerCase();
+
+    for (let heroe of this.heroes) {
+      let nombre = heroe.nombre.toLowerCase();
+
+      if (nombre.indexOf(word) >= 0) {
+        heroesArr.push(heroe);
+      }
+    }
+
+    return heroesArr;
   }
 }
 
