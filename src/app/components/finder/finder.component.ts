@@ -9,10 +9,12 @@ import {HeroesService} from '../../services/heroes.service';
 export class FinderComponent implements OnInit {
 
   heroes: any[] = [];
+  term: string;
 
   constructor(private _activatedRoute: ActivatedRoute, private _heroesService: HeroesService) {
     this._activatedRoute.params.subscribe(params => {
       this.heroes = this._heroesService.buscarHeroes(params['text']);
+      this.term = params['text'];
     });
   }
 

@@ -1,6 +1,15 @@
 <h1 class="animated fadeIn fast">Heroes <small>Marvel y Dc</small></h1>
 <hr>
 
+<div class="row animated fadeIn fast" *ngIf="heroes.length === 0 ">
+  <div class="col-md-12">
+    <div class="alert alert-info" role="alert">
+      No existen resultados para el termino: {{term}}
+    </div>
+  </div>
+</div>
+
+
 <div class="card-columns">
 
   <div class="card animated fadeIn" *ngFor="let heroe of heroes; let i = index;">

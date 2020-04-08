@@ -16,6 +16,7 @@ import {HeroesComponent} from './components/heroes/heroes.component';
 import {FooterComponent} from './components/shared/footer/footer.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { FinderComponent } from './components/finder/finder.component';
+import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FinderComponent } from './components/finder/finder.component';
     HeroesComponent,
     FooterComponent,
     HeroeComponent,
-    FinderComponent
+    FinderComponent,
+    HeroeTarjetaComponent
   ],
   imports: [
     BrowserModule,
